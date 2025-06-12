@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас | TRAVEL FINDER</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">TRAVEL FINDER</a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="index.html">Отели</a></li>
+                        <li><a href="about.html" class="active">О нас</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <a href="https://t.me/your_channel" class="telegram-link" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <div class="lang-switch">
+                        <i class="fas fa-globe"></i>
+                        <span class="current-lang">RU</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="lang-menu">
+                        <div class="lang-option active" data-lang="ru">
+                            <img src="https://flagcdn.com/w40/ru.png" alt="Russian">
+                            Русский
+                        </div>
+                        <div class="lang-option" data-lang="en">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="English">
+                            English
+                        </div>
+                    </div>
+                    <button class="auth-btn" id="authBtn">Войти</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>О компании TRAVEL FINDER</h1>
+            <p class="hero-description">Ваш надежный партнер в мире путешествий с 2020 года</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Наша миссия</h2>
+                    <p>TRAVEL FINDER - это инновационная платформа для поиска и бронирования отелей по всему миру. Мы стремимся сделать путешествия доступными и комфортными для каждого.</p>
+                    
+                    <h2>Почему выбирают нас</h2>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-hotel"></i>
+                            <h3>Большой выбор отелей</h3>
+                            <p>Более 100,000 отелей по всему миру</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-percent"></i>
+                            <h3>Лучшие цены</h3>
+                            <p>Гарантия лучшей цены на рынке</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-headset"></i>
+                            <h3>24/7 поддержка</h3>
+                            <p>Круглосуточная помощь клиентам</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Безопасное бронирование</h3>
+                            <p>Защита данных и платежей</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="photo-gallery">
+        <div class="container">
+            <h2>Галерея</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper" id="aboutGallerySlider">
+                    <!-- Photos will be added dynamically -->
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">100K+</span>
+                    <span class="stat-label">Отелей</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Клиентов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">Стран</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Поддержка</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__column">
+                    <h3>TRAVEL FINDER</h3>
+                    <p>Ваш надежный помощник в поиске идеального отеля</p>
+                </div>
+                <div class="footer__column">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@travelfinder.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Примерная, 123</li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4>Социальные сети</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 TRAVEL FINDER. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/hotels.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html> 

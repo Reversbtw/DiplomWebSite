@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVEL FINDER - Бронирование отелей</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <img src="favicon.svg" alt="Travel Finder Logo" class="logo-icon">
+                    TRAVEL FINDER
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="index.html" class="active">Отели</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <a href="https://t.me/dreamtravel99" class="telegram-link" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <div class="lang-switch">
+                        <i class="fas fa-globe"></i>
+                        <span class="current-lang">RU</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="lang-menu">
+                        <div class="lang-option active" data-lang="ru">
+                            <img src="https://flagcdn.com/w40/ru.png" alt="Russian">
+                            Русский
+                        </div>
+                        <div class="lang-option" data-lang="en">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="English">
+                            English
+                        </div>
+                    </div>
+                    <button class="auth-btn" id="authBtn">Войти</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Вход</button>
+                <button class="tab-btn" data-tab="register">Регистрация</button>
+            </div>
+            <div class="auth-forms">
+                <form id="loginForm" class="active">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Пароль" required>
+                    <button type="submit">Войти</button>
+                </form>
+                <form id="registerForm">
+                    <input type="text" name="name" placeholder="Имя" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Пароль" required>
+                    <input type="password" name="confirmPassword" placeholder="Подтвердите пароль" required>
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Найдите идеальный отель для вашего путешествия</h1>
+            <div class="search-form">
+                <input type="text" placeholder="Страна или город" id="locationSearch">
+                <input type="date" id="checkIn">
+                <input type="date" id="checkOut">
+                <select id="priceRange" class="narrow-select">
+                    <option value="">Цена</option>
+                    <option value="0-5000">До 5000 ₽</option>
+                    <option value="5000-15000">5000-15000 ₽</option>
+                    <option value="15000-30000">15000-30000 ₽</option>
+                    <option value="30000+">От 30000 ₽</option>
+                </select>
+                <button type="submit">Найти</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="photo-gallery">
+        <div class="container">
+            <h2>Фотогалерея</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper" id="gallerySlider">
+                    <!-- Photos will be added dynamically -->
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotels Grid -->
+    <section class="hotels-grid">
+        <div class="container">
+            <h2>Все отели</h2>
+            <div class="filters">
+                <select id="countryFilter">
+                    <option value="">Все страны</option>
+                </select>
+                <select id="cityFilter">
+                    <option value="">Все города</option>
+                </select>
+                <select id="sortPrice">
+                    <option value="">Сортировка по цене</option>
+                    <option value="asc">По возрастанию</option>
+                    <option value="desc">По убыванию</option>
+                </select>
+            </div>
+            <div class="hotels-container" id="hotelsGrid">
+                <!-- Hotels will be added dynamically -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__column">
+                    <h3>TRAVEL FINDER</h3>
+                    <p>Ваш надежный помощник в поиске идеального отеля</p>
+                </div>
+                <div class="footer__column">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (913) 777-07-37</li>
+                        <li><i class="fas fa-envelope"></i> info@travelfinder.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Новосибирск, Ленинградская 106</li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4>Социальные сети</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 TRAVEL FINDER. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/hotels.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отель | TRAVEL FINDER</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/hotel-page.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <img src="favicon.svg" alt="Travel Finder Logo" class="logo-icon">
+                    TRAVEL FINDER
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="index.html">Отели</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <a href="https://t.me/dreamtravel99" class="telegram-link" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <div class="lang-switch">
+                        <i class="fas fa-globe"></i>
+                        <span class="current-lang">RU</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="lang-menu">
+                        <div class="lang-option active" data-lang="ru">
+                            <img src="https://flagcdn.com/w40/ru.png" alt="Russian">
+                            Русский
+                        </div>
+                        <div class="lang-option" data-lang="en">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="English">
+                            English
+                        </div>
+                    </div>
+                    <button class="auth-btn" id="authBtn">Войти</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Вход</button>
+                <button class="tab-btn" data-tab="register">Регистрация</button>
+            </div>
+            <div class="auth-forms">
+                <form id="loginForm" class="active">
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Пароль" required>
+                    <button type="submit">Войти</button>
+                </form>
+                <form id="registerForm">
+                    <input type="text" placeholder="Имя" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Пароль" required>
+                    <input type="password" placeholder="Подтвердите пароль" required>
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hotel Content -->
+    <main class="hotel-page">
+        <div class="hotel-gallery">
+            <div class="swiper hotel-page-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Images will be added dynamically -->
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="hotel-content">
+                <div class="hotel-header">
+                    <div class="hotel-main-info">
+                        <h1 class="hotel-name"><!-- Hotel name will be added dynamically --></h1>
+                        <div class="hotel-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><!-- Location will be added dynamically --></span>
+                        </div>
+                    </div>
+                    <div class="hotel-price">
+                        <span class="price-value"><!-- Price will be added dynamically --></span>
+                        <span class="price-period">за ночь</span>
+                    </div>
+                </div>
+
+                <div class="hotel-description">
+                    <!-- Description will be added dynamically -->
+                </div>
+
+                <div class="hotel-features">
+                    <h2>Удобства</h2>
+                    <div class="amenities-list">
+                        <!-- Amenities will be added dynamically -->
+                    </div>
+                </div>
+
+                <div class="booking-section">
+                    <div class="booking-form">
+                        <h2>Забронировать</h2>
+                        <div class="form-group">
+                            <label for="check-in">Дата заезда</label>
+                            <input type="date" id="check-in">
+                        </div>
+                        <div class="form-group">
+                            <label for="check-out">Дата выезда</label>
+                            <input type="date" id="check-out">
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Количество гостей</label>
+                            <select id="guests">
+                                <option value="1">1 гость</option>
+                                <option value="2">2 гостя</option>
+                                <option value="3">3 гостя</option>
+                                <option value="4">4 гостя</option>
+                            </select>
+                        </div>
+                        <button class="book-btn">Забронировать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__column">
+                    <h3>TRAVEL FINDER</h3>
+                    <p>Ваш надежный помощник в поиске идеального отеля</p>
+                </div>
+                <div class="footer__column">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (913) 777-07-37</li>
+                        <li><i class="fas fa-envelope"></i> info@travelfinder.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Новосибирск, Ленинградская 106</li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4>Социальные сети</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/hotels.js"></script>
+    <script src="js/hotel-page.js"></script>
+</body>
+</html> 
